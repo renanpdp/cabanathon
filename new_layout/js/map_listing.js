@@ -14,14 +14,14 @@ var
 	markersData = {
 		'Doctors': [
 			{
-				name: 'Condomínio Edifício Andrea',
-				location_latitude: -3.7459542,
-				location_longitude: -38.5078373,
-				map_image_url: 'img/desabamento-edificio-andrea.jpg',
-				type: 'Condomínio Edifício Andrea',
+				name: 'Deslizamento em Niterói',
+				location_latitude: -22.9094478,
+				location_longitude: -43.0649174,
+				map_image_url: 'img/niteroi-deslizamento.jpg',
+				type: 'Niterói',
 				url_detail: 'detail-page.html',
-				name_point: 'Desabamento',
-				description_point: 'Rua Tibúrcio Cavalcante, 2405 - Dionísio Torres, Fortaleza, CE',
+				name_point: 'Deslizamento',
+				description_point: 'Morro da Boa Esperança',
 				get_directions_start_address: '',
 				phone: '+3934245255'
 			},
@@ -55,7 +55,7 @@ var
 
 var mapOptions = {
 	zoom: 12,
-	center: new google.maps.LatLng(-3.7817605, -38.5242189),
+	center: new google.maps.LatLng(-22.9094478, -43.0649174),
 	mapTypeId: google.maps.MapTypeId.ROADMAP,
 
 	mapTypeControl: false,
@@ -242,8 +242,8 @@ function getInfoBox(item) {
 			'<h3><a href=' + item.url_detail + '>' + item.name_point + '</a></h3>' +
 			'<span>' + item.description_point + '</span>' +
 			'<div class="marker_tools">' +
-			'<form action="http://maps.google.com/maps" method="get" target="_blank" style="display:inline-block""><input name="saddr" value="' + item.get_directions_start_address + '" type="hidden"><input type="hidden" name="daddr" value="' + item.location_latitude + ',' + item.location_longitude + '"><button type="submit" value="Get directions" class="btn_infobox_get_directions">Directions</button></form>' +
-			'<a href="tel://' + item.phone + '" class="btn_infobox_phone">' + item.phone + '</a>' +
+			// '<form action="http://maps.google.com/maps" method="get" target="_blank" style="display:inline-block""><input name="saddr" value="' + item.get_directions_start_address + '" type="hidden"><input type="hidden" name="daddr" value="' + item.location_latitude + ',' + item.location_longitude + '"><button type="submit" value="Get directions" class="btn_infobox_get_directions">Directions</button></form>' +
+			// '<a href="tel://' + item.phone + '" class="btn_infobox_phone">' + item.phone + '</a>' +
 			'</div>' +
 			'</div>',
 		disableAutoPan: false,
